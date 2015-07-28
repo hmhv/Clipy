@@ -7,6 +7,17 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="PreferenceWindowController" customModule="Clipy" customModuleProvider="target">
             <connections>
+                <outlet property="generalButton" destination="iq7-KI-vYc" id="B4N-OK-Aqv"/>
+                <outlet property="generalLabel" destination="cTj-5M-fud" id="prw-HN-Nnb"/>
+                <outlet property="menuButton" destination="Vvg-gP-K4B" id="090-fv-SIs"/>
+                <outlet property="menuLabel" destination="VUL-Y6-BVb" id="Agb-iH-OQA"/>
+                <outlet property="shortcutButton" destination="rWb-EC-l8L" id="sXh-dJ-SQ9"/>
+                <outlet property="shortcutLabel" destination="Yv4-Um-upg" id="o9v-Qu-6c0"/>
+                <outlet property="toolbarView" destination="ExO-Yf-a0Q" id="kPe-lk-KFP"/>
+                <outlet property="typeButton" destination="d0l-uZ-Vao" id="hys-fs-ki2"/>
+                <outlet property="typeLabel" destination="rq7-xp-lRH" id="DZC-Lb-qFM"/>
+                <outlet property="updateButton" destination="Tz5-gs-agL" id="uBL-XQ-NG5"/>
+                <outlet property="updateLabel" destination="IQ0-F7-5Uo" id="pQG-hS-hgB"/>
                 <outlet property="window" destination="F0z-JX-Cv5" id="gIp-Ho-8D9"/>
             </connections>
         </customObject>
@@ -29,6 +40,119 @@
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
+                    <customView id="ExO-Yf-a0Q">
+                        <rect key="frame" x="0.0" y="244" width="480" height="56"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <subviews>
+                            <box verticalHuggingPriority="750" title="Box" boxType="separator" titlePosition="noTitle" id="QW5-1G-dtj">
+                                <rect key="frame" x="0.0" y="0.0" width="480" height="5"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                                <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <font key="titleFont" metaFont="system"/>
+                            </box>
+                            <button id="iq7-KI-vYc">
+                                <rect key="frame" x="9" y="24" width="36" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="pref_general" imagePosition="only" alignment="center" imageScaling="proportionallyDown" inset="2" id="bQ3-8G-kQI">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="switchView:" target="-2" id="IfT-Za-zd3"/>
+                                </connections>
+                            </button>
+                            <button tag="1" id="Vvg-gP-K4B">
+                                <rect key="frame" x="54" y="24" width="36" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="pref_general" imagePosition="only" alignment="center" imageScaling="proportionallyDown" inset="2" id="aUT-UJ-uO0">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="switchView:" target="-2" id="edg-kl-yVh"/>
+                                </connections>
+                            </button>
+                            <button tag="2" id="d0l-uZ-Vao">
+                                <rect key="frame" x="99" y="24" width="36" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="pref_type" imagePosition="only" alignment="center" imageScaling="proportionallyDown" inset="2" id="0qy-WE-939">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="switchView:" target="-2" id="zNc-WW-W3K"/>
+                                </connections>
+                            </button>
+                            <button tag="3" id="rWb-EC-l8L">
+                                <rect key="frame" x="159" y="24" width="36" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="pref_shortcut" imagePosition="only" alignment="center" imageScaling="proportionallyDown" inset="2" id="kLL-bk-6Cw">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="switchView:" target="-2" id="ku1-WF-1Bw"/>
+                                </connections>
+                            </button>
+                            <button tag="4" id="Tz5-gs-agL">
+                                <rect key="frame" x="229" y="24" width="36" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="pref_update" imagePosition="only" alignment="center" imageScaling="proportionallyDown" inset="2" id="9Bf-u6-U7L">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="switchView:" target="-2" id="cvR-LZ-mlG"/>
+                                </connections>
+                            </button>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="cTj-5M-fud">
+                                <rect key="frame" x="12" y="3" width="30" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="一般" id="VuY-4f-HXR">
+                                    <font key="font" size="9" name="HiraKakuProN-W3"/>
+                                    <color key="textColor" red="0.26666666666666666" green="0.26666666666666666" blue="0.26666666666666666" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="VUL-Y6-BVb">
+                                <rect key="frame" x="50" y="3" width="44" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="メニュー" id="BgK-gk-cMq">
+                                    <font key="font" size="9" name="HiraKakuProN-W3"/>
+                                    <color key="textColor" red="0.2666666667" green="0.2666666667" blue="0.2666666667" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="rq7-xp-lRH">
+                                <rect key="frame" x="95" y="3" width="44" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="対応形式" id="GHJ-mk-kD7">
+                                    <font key="font" size="9" name="HiraKakuProN-W3"/>
+                                    <color key="textColor" red="0.2666666667" green="0.2666666667" blue="0.2666666667" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="Yv4-Um-upg">
+                                <rect key="frame" x="142" y="3" width="71" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="ショートカット" id="7hf-ZD-Czq">
+                                    <font key="font" size="9" name="HiraKakuProN-W3"/>
+                                    <color key="textColor" red="0.2666666667" green="0.2666666667" blue="0.2666666667" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="IQ0-F7-5Uo">
+                                <rect key="frame" x="212" y="3" width="71" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="アップデート" id="mXy-zl-Zfr">
+                                    <font key="font" size="9" name="HiraKakuProN-W3"/>
+                                    <color key="textColor" red="0.2666666667" green="0.2666666667" blue="0.2666666667" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                    </customView>
                 </subviews>
             </view>
             <connections>
@@ -36,4 +160,10 @@
             </connections>
         </window>
     </objects>
+    <resources>
+        <image name="pref_general" width="36" height="24"/>
+        <image name="pref_shortcut" width="36" height="24"/>
+        <image name="pref_type" width="36" height="24"/>
+        <image name="pref_update" width="36" height="24"/>
+    </resources>
 </document>

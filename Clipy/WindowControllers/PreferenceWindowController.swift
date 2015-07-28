@@ -16,73 +16,49 @@ class PreferenceWindowController: NSWindowController {
                                         NSViewController(nibName: "CPYTypeViewController", bundle: nil),
                                         NSViewController(nibName: "CPYShortcutViewController", bundle: nil),
                                         NSViewController(nibName: "CPYUpdateViewController", bundle: nil)]
+    // toolbar
+    @IBOutlet weak var toolbarView: NSView!
+    // toolbar item
+    @IBOutlet weak var generalButton: NSButton!
+    @IBOutlet weak var menuButton: NSButton!
+    @IBOutlet weak var typeButton: NSButton!
+    @IBOutlet weak var shortcutButton: NSButton!
+    @IBOutlet weak var updateButton: NSButton!
+    // toolbar title
+    @IBOutlet weak var generalLabel: NSTextField!
+    @IBOutlet weak var menuLabel: NSTextField!
+    @IBOutlet weak var typeLabel: NSTextField!
+    @IBOutlet weak var shortcutLabel: NSTextField!
+    @IBOutlet weak var updateLabel: NSTextField!
     
     // MARK: - Window Life Cycle
     override func windowDidLoad() {
         super.windowDidLoad()
-        self.initToolbar()
         self.window?.backgroundColor = NSColor.whiteColor()
         self.window?.titlebarAppearsTransparent = true
+        self.switchView(self.generalButton)
     }
     
-    // MARK: - Private Methods
-    private func initToolbar() {
-        let toolBar = NSToolbar(identifier: "toolBar")
-        toolBar.allowsUserCustomization = true
-        toolBar.autosavesConfiguration = true
-        self.window?.toolbar = toolBar
-    }
-    
-}
-
-extension PreferenceWindowController: NSToolbarDelegate {
-    /*
-    func toolbarAllowedItemIdentifiers(toolbar: NSToolbar) -> [AnyObject] {
-        return [kAddSnippetIdentifier, kAddFolderIdentifier, kDeleteIdentifier, kEnableIdentifier, kSettingIdentifier]
-    }
-    
-    func toolbarDefaultItemIdentifiers(toolbar: NSToolbar) -> [AnyObject] {
-        return [kAddSnippetIdentifier, kAddFolderIdentifier, kDeleteIdentifier, kEnableIdentifier, kSettingIdentifier]
-    }
-    
-    func toolbar(toolbar: NSToolbar, itemForItemIdentifier itemIdentifier: String, willBeInsertedIntoToolbar flag: Bool) -> NSToolbarItem? {
-        
-        var image: NSImage?
-        var title  = ""
-        var action = ""
-        
-        if itemIdentifier == kAddSnippetIdentifier {
-            image = NSImage(named: "add_snippet")
-            title = "追加"
-            action = ""
-        } else if itemIdentifier == kAddFolderIdentifier {
-            image = NSImage(named: "add_folder")
-            title = "追加"
-            action = ""
-        } else if itemIdentifier == kDeleteIdentifier {
-            image = NSImage(named: "delete_snippet")
-            title = "削除"
-            action = ""
-        } else if itemIdentifier == kEnableIdentifier {
-            image = NSImage(named: "enable_snippet")
-            title = "オン/オフ"
-            action = ""
-        } else if itemIdentifier == kSettingIdentifier {
-            image = NSImage(named: "setting_snippet")
-            title = "編集"
-            action = ""
+    // MARK: - IBActions
+    @IBAction func switchView(sender: AnyObject) {
+        if let button = sender as? NSButton {
+            if let newView = self.viewControllers[button.tag]?.view {
+                for view in self.window!.contentView.subviews {
+                    if let view = view as? NSView where view != self.toolbarView {
+                        view.removeFromSuperview()
+                    }
+                }
+                
+                let frame = self.window!.frame
+                var newFrame = self.window!.frameRectForContentRect(newView.frame)
+                newFrame.origin = frame.origin
+                newFrame.origin.y += NSHeight(frame) - NSHeight(newFrame) - NSHeight(self.toolbarView.frame)
+                newFrame.size.height += NSHeight(self.toolbarView.frame)
+                self.window!.setFrame(newFrame, display: true)
+                
+                self.window!.contentView.addSubview(newView)
+            }
         }
-        
-        let imageView = NSImageView(frame: NSMakeRect(0, 0, 36, 24))
-        imageView.image = image
-        
-        let item = NSToolbarItem(itemIdentifier: itemIdentifier)
-        item.label = title
-        item.target = self
-        item.view = imageView
-        
-        return item
     }
-    */
+    
 }
-
