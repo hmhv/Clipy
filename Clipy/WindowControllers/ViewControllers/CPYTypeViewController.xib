@@ -13,8 +13,78 @@
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customView id="c22-O7-iKe">
-            <rect key="frame" x="0.0" y="0.0" width="480" height="272"/>
+            <rect key="frame" x="0.0" y="0.0" width="480" height="218"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <box title="Select clipboard types to store:" id="c3r-uv-Yuc">
+                    <rect key="frame" x="76" y="20" width="329" height="175"/>
+                    <autoresizingMask key="autoresizingMask"/>
+                    <view key="contentView">
+                        <rect key="frame" x="2" y="2" width="325" height="158"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button id="oCD-zy-ZYU">
+                                <rect key="frame" x="14" y="132" width="238" height="18"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <buttonCell key="cell" type="check" title="Plain Text" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="64l-4V-6d1">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="titleBar" size="12"/>
+                                </buttonCell>
+                            </button>
+                            <button id="XBt-Da-scp">
+                                <rect key="frame" x="14" y="112" width="238" height="18"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <buttonCell key="cell" type="check" title="Rich Text Format (RTF)" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="Es3-wp-v1x">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="titleBar" size="12"/>
+                                </buttonCell>
+                            </button>
+                            <button id="X7t-yW-2Yo">
+                                <rect key="frame" x="14" y="92" width="238" height="18"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <buttonCell key="cell" type="check" title="Rich Text Format Directory (RTFD)" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="WOl-Hm-iRt">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="titleBar" size="12"/>
+                                </buttonCell>
+                            </button>
+                            <button id="P8J-dJ-xi5">
+                                <rect key="frame" x="14" y="72" width="238" height="18"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <buttonCell key="cell" type="check" title="PDF" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="4sJ-6D-bQ7">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="titleBar" size="12"/>
+                                </buttonCell>
+                            </button>
+                            <button id="qLL-Ab-1nf">
+                                <rect key="frame" x="14" y="52" width="238" height="18"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <buttonCell key="cell" type="check" title="Filenames" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="7cx-2O-4ei">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="titleBar" size="12"/>
+                                </buttonCell>
+                            </button>
+                            <button id="jJd-9z-5wx">
+                                <rect key="frame" x="14" y="32" width="238" height="18"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <buttonCell key="cell" type="check" title="URL" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="k5g-M8-Fry">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="titleBar" size="12"/>
+                                </buttonCell>
+                            </button>
+                            <button id="uzQ-Km-4h7">
+                                <rect key="frame" x="15" y="11" width="238" height="18"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <buttonCell key="cell" type="check" title="TIFF Image" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="UIm-NV-R8L">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="titleBar" size="12"/>
+                                </buttonCell>
+                            </button>
+                        </subviews>
+                    </view>
+                    <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                    <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </box>
+            </subviews>
         </customView>
     </objects>
 </document>

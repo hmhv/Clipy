@@ -34,7 +34,7 @@ class PreferenceWindowController: NSWindowController {
     // MARK: - Window Life Cycle
     override func windowDidLoad() {
         super.windowDidLoad()
-        self.window?.backgroundColor = NSColor.whiteColor()
+        self.window?.backgroundColor = NSColor(red: 0.99, green: 0.99, blue: 0.99, alpha: 1)
         self.window?.titlebarAppearsTransparent = true
         self.switchView(self.generalButton)
     }
