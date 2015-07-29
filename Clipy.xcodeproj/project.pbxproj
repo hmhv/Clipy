@@ -248,10 +248,10 @@
 			children = (
 				FA58AB871B6926F900518671 /* CPYGeneralViewController.xib */,
 				FA58AB881B6926F900518671 /* CPYMenuViewController.xib */,
-				FA58AB891B6926F900518671 /* CPYShortcutViewController.swift */,
-				FA58AB8A1B6926F900518671 /* CPYShortcutViewController.xib */,
 				FA58AB8B1B6926F900518671 /* CPYTypeViewController.swift */,
 				FA58AB8C1B6926F900518671 /* CPYTypeViewController.xib */,
+				FA58AB891B6926F900518671 /* CPYShortcutViewController.swift */,
+				FA58AB8A1B6926F900518671 /* CPYShortcutViewController.xib */,
 				FA58AB8D1B6926F900518671 /* CPYUpdateViewController.xib */,
 			);
 			path = ViewControllers;

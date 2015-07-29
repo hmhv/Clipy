@@ -10,9 +10,28 @@ import Cocoa
 
 class CPYTypeViewController: NSViewController {
 
+    // MARK: - Properties
+    internal var storeTypes: NSMutableDictionary!
+    
+    override init?(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+        let defaults = NSUserDefaults.standardUserDefaults()
+        self.storeTypes = (defaults.objectForKey(kCPYPrefStoreTypesKey) as! NSMutableDictionary).mutableCopy() as! NSMutableDictionary
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do view setup here.
+    }
+    
+    // MARK: - Public Methods
+    internal func saveTypes() {
+        let defaults = NSUserDefaults.standardUserDefaults()
+        defaults.setObject(self.storeTypes, forKey: kCPYPrefStoreTypesKey)
+        defaults.synchronize()
     }
     
 }

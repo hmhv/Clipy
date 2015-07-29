@@ -13,8 +13,8 @@ class PreferenceWindowController: NSWindowController {
     // MARK: - Properties
     private lazy var viewControllers = [NSViewController(nibName: "CPYGeneralViewController", bundle: nil),
                                         NSViewController(nibName: "CPYMenuViewController", bundle: nil),
-                                        NSViewController(nibName: "CPYTypeViewController", bundle: nil),
-                                        NSViewController(nibName: "CPYShortcutViewController", bundle: nil),
+                                        CPYTypeViewController(nibName: "CPYTypeViewController", bundle: nil),
+                                        CPYShortcutViewController(nibName: "CPYShortcutViewController", bundle: nil),
                                         NSViewController(nibName: "CPYUpdateViewController", bundle: nil)]
     // toolbar
     @IBOutlet weak var toolbarView: NSView!
@@ -121,6 +121,11 @@ class PreferenceWindowController: NSWindowController {
 // MARK: - NSWindow Delegate
 extension PreferenceWindowController: NSWindowDelegate {
     func windowWillClose(notification: NSNotification) {
+        
+        if let typeViewController = self.viewControllers[2] as? CPYTypeViewController {
+            typeViewController.saveTypes()
+        }
+        
         if let window = self.window {
             if !window.makeFirstResponder(window) {
                 window.endEditingFor(nil)

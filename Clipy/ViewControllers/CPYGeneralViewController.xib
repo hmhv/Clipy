@@ -13,11 +13,11 @@
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customView id="c22-O7-iKe">
-            <rect key="frame" x="0.0" y="0.0" width="480" height="300"/>
+            <rect key="frame" x="0.0" y="5" width="480" height="290"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
                 <button id="SFt-CS-wYT">
-                    <rect key="frame" x="60" y="239" width="297" height="18"/>
+                    <rect key="frame" x="60" y="234" width="297" height="18"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <buttonCell key="cell" type="check" title="Launch on Login" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="aO2-qL-HUi">
                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -28,7 +28,7 @@
                     </connections>
                 </button>
                 <button id="oKa-XP-P17">
-                    <rect key="frame" x="60" y="219" width="297" height="18"/>
+                    <rect key="frame" x="60" y="214" width="297" height="18"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <buttonCell key="cell" type="check" title="Input &quot;⌘ + V&quot; after menu item selection" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="gKd-Ra-5yx">
                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -39,7 +39,7 @@
                     </connections>
                 </button>
                 <textField verticalHuggingPriority="750" id="TqS-0g-I9l">
-                    <rect key="frame" x="60" y="263" width="210" height="17"/>
+                    <rect key="frame" x="60" y="258" width="210" height="17"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" allowsUndo="NO" sendsActionOnEndEditing="YES" title="Behavior" id="ucO-ua-Cdb">
                         <font key="font" size="13" name="HiraKakuProN-W6"/>
@@ -48,7 +48,7 @@
                     </textFieldCell>
                 </textField>
                 <textField verticalHuggingPriority="750" id="b7X-KV-NMq">
-                    <rect key="frame" x="60" y="188" width="210" height="17"/>
+                    <rect key="frame" x="60" y="183" width="210" height="17"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" allowsUndo="NO" sendsActionOnEndEditing="YES" title="Clipboard History" id="fWL-Ke-rt2">
                         <font key="font" size="13" name="HiraKakuProN-W6"/>
@@ -57,7 +57,7 @@
                     </textFieldCell>
                 </textField>
                 <textField verticalHuggingPriority="750" id="ocl-fK-o1e">
-                    <rect key="frame" x="372" y="158" width="39" height="14"/>
+                    <rect key="frame" x="372" y="153" width="39" height="14"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="items" id="VvN-eD-Ord">
                         <font key="font" size="11" name="HiraKakuProN-W3"/>
@@ -66,7 +66,7 @@
                     </textFieldCell>
                 </textField>
                 <textField verticalHuggingPriority="750" id="OOX-LJ-hfZ">
-                    <rect key="frame" x="323" y="158" width="44" height="22"/>
+                    <rect key="frame" x="323" y="153" width="44" height="22"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="right" drawsBackground="YES" id="3bL-Oh-4xB">
                         <numberFormatter key="formatter" formatterBehavior="default10_4" usesGroupingSeparator="NO" groupingSize="0" minimumIntegerDigits="0" maximumIntegerDigits="42" id="2ky-Ec-sGg">
@@ -81,7 +81,7 @@
                     </connections>
                 </textField>
                 <textField verticalHuggingPriority="750" id="Vi9-0U-Zf7">
-                    <rect key="frame" x="60" y="160" width="253" height="17"/>
+                    <rect key="frame" x="60" y="155" width="253" height="17"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="Max clipboard history size:" id="iXv-WJ-INt">
                         <font key="font" size="13" name="HiraKakuProN-W3"/>
@@ -90,7 +90,7 @@
                     </textFieldCell>
                 </textField>
                 <textField verticalHuggingPriority="750" id="1AE-bK-azx">
-                    <rect key="frame" x="60" y="128" width="210" height="17"/>
+                    <rect key="frame" x="60" y="123" width="210" height="17"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" allowsUndo="NO" sendsActionOnEndEditing="YES" title="Appearance" id="vMA-Uk-4OA">
                         <font key="font" size="13" name="HiraKakuProN-W6"/>
@@ -99,7 +99,7 @@
                     </textFieldCell>
                 </textField>
                 <popUpButton verticalHuggingPriority="750" id="8Zs-NB-0bK">
-                    <rect key="frame" x="259" y="96" width="78" height="26"/>
+                    <rect key="frame" x="259" y="91" width="78" height="26"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" id="2ng-r7-bq7">
                         <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
@@ -123,7 +123,7 @@
                     </connections>
                 </popUpButton>
                 <textField verticalHuggingPriority="750" id="46Z-xP-Q5A">
-                    <rect key="frame" x="60" y="103" width="197" height="17"/>
+                    <rect key="frame" x="60" y="98" width="197" height="17"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Status Bar icon style:" id="1Oo-0c-c2P">
                         <font key="font" size="13" name="HiraKakuProN-W3"/>
@@ -132,7 +132,7 @@
                     </textFieldCell>
                 </textField>
                 <textField verticalHuggingPriority="750" id="KAG-el-Wst">
-                    <rect key="frame" x="372" y="20" width="28" height="14"/>
+                    <rect key="frame" x="372" y="15" width="28" height="14"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="sec." id="Rm3-pl-HbY">
                         <font key="font" size="11" name="HiraKakuProN-W3"/>
@@ -141,7 +141,7 @@
                     </textFieldCell>
                 </textField>
                 <slider verticalHuggingPriority="750" id="wAC-aO-fqA">
-                    <rect key="frame" x="63" y="19" width="264" height="19"/>
+                    <rect key="frame" x="63" y="14" width="264" height="19"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <sliderCell key="cell" controlSize="small" alignment="left" maxValue="1" doubleValue="1" tickMarkPosition="above" numberOfTickMarks="5" allowsTickMarkValuesOnly="YES" sliderType="linear" id="yYt-UN-Pn5">
                         <font key="font" size="12" name="Helvetica"/>
@@ -151,7 +151,7 @@
                     </connections>
                 </slider>
                 <textField verticalHuggingPriority="750" id="Sti-PU-Rp0">
-                    <rect key="frame" x="60" y="47" width="361" height="17"/>
+                    <rect key="frame" x="60" y="42" width="361" height="17"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="Time interval to observe the clipboard:" id="QLj-c0-TiT">
                         <font key="font" size="13" name="HiraKakuProN-W3"/>
@@ -160,7 +160,7 @@
                     </textFieldCell>
                 </textField>
                 <textField verticalHuggingPriority="750" id="gmL-6n-coP">
-                    <rect key="frame" x="60" y="72" width="210" height="17"/>
+                    <rect key="frame" x="60" y="67" width="210" height="17"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" allowsUndo="NO" sendsActionOnEndEditing="YES" title="Time interval" id="SRf-dt-xfj">
                         <font key="font" size="13" name="HiraKakuProN-W6"/>
@@ -169,7 +169,7 @@
                     </textFieldCell>
                 </textField>
                 <textField verticalHuggingPriority="750" id="1oz-iT-fQ3">
-                    <rect key="frame" x="333" y="20" width="38" height="17"/>
+                    <rect key="frame" x="333" y="15" width="38" height="17"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" allowsUndo="NO" sendsActionOnEndEditing="YES" alignment="right" title="0" id="ZUB-A8-GyW">
                         <numberFormatter key="formatter" formatterBehavior="default10_4" numberStyle="decimal" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" maximumFractionDigits="3" id="aON-vT-5sQ">
@@ -188,6 +188,7 @@
                     </connections>
                 </textField>
             </subviews>
+            <point key="canvasLocation" x="729" y="655"/>
         </customView>
         <userDefaultsController representsSharedInstance="YES" id="xwW-R2-im0"/>
     </objects>
