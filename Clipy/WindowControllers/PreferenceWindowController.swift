@@ -43,6 +43,11 @@ class PreferenceWindowController: NSWindowController {
     @IBAction func switchView(sender: AnyObject) {
         if let button = sender as? NSButton {
             if let newView = self.viewControllers[button.tag]?.view {
+                
+                self.resetButtonImages()
+                self.selectButton(button.tag)
+                
+                
                 for view in self.window!.contentView.subviews {
                     if let view = view as? NSView where view != self.toolbarView {
                         view.removeFromSuperview()
@@ -59,6 +64,55 @@ class PreferenceWindowController: NSWindowController {
                 self.window!.contentView.addSubview(newView)
             }
         }
+    }
+    
+    // MARK: - Private Methods
+    private func resetButtonImages() {
+        self.generalButton.image    = NSImage(named: "pref_general")
+        self.menuButton.image       = NSImage(named: "pref_menu")
+        self.typeButton.image       = NSImage(named: "pref_type")
+        self.shortcutButton.image   = NSImage(named: "pref_shortcut")
+        self.updateButton.image     = NSImage(named: "pref_update")
+        
+        self.generalLabel.textColor     = NSColor(red: 0.2666, green: 0.2666, blue: 0.2666, alpha: 1)
+        self.menuLabel.textColor        = NSColor(red: 0.2666, green: 0.2666, blue: 0.2666, alpha: 1)
+        self.typeLabel.textColor        = NSColor(red: 0.2666, green: 0.2666, blue: 0.2666, alpha: 1)
+        self.shortcutLabel.textColor    = NSColor(red: 0.2666, green: 0.2666, blue: 0.2666, alpha: 1)
+        self.updateLabel.textColor      = NSColor(red: 0.2666, green: 0.2666, blue: 0.2666, alpha: 1)
+    }
+    
+    private func selectButton(tag: Int) {
+        var selectButton: NSButton?
+        var selectLabel: NSTextField?
+        var selectImage: NSImage?
+        
+        switch tag{
+        case 0:
+            selectButton = self.generalButton
+            selectLabel  = self.generalLabel
+            selectImage  = NSImage(named: "pref_general_on")
+        case 1:
+            selectButton = self.menuButton
+            selectLabel  = self.menuLabel
+            selectImage  = NSImage(named: "pref_menu_on")
+        case 2:
+            selectButton = self.typeButton
+            selectLabel  = self.typeLabel
+            selectImage  = NSImage(named: "pref_type_on")
+        case 3:
+            selectButton = self.shortcutButton
+            selectLabel  = self.shortcutLabel
+            selectImage  = NSImage(named: "pref_shortcut_on")
+        case 4:
+            selectButton = self.updateButton
+            selectLabel  = self.updateLabel
+            selectImage  = NSImage(named: "pref_update_on")
+        default:
+            break
+        }
+        
+        selectButton?.image = selectImage
+        selectLabel?.textColor = NSColor(red: 0.164, green: 0.517, blue: 0.823, alpha: 1)
     }
     
 }
