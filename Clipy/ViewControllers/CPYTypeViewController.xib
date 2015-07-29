@@ -20,7 +20,7 @@
                     <rect key="frame" x="76" y="20" width="329" height="175"/>
                     <autoresizingMask key="autoresizingMask"/>
                     <view key="contentView">
-                        <rect key="frame" x="2" y="2" width="325" height="158"/>
+                        <rect key="frame" x="2" y="2" width="325" height="156"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button id="oCD-zy-ZYU">
@@ -28,7 +28,7 @@
                                 <autoresizingMask key="autoresizingMask"/>
                                 <buttonCell key="cell" type="check" title="Plain Text" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="64l-4V-6d1">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                    <font key="font" metaFont="titleBar" size="12"/>
+                                    <font key="font" size="13" name="HiraKakuProN-W3"/>
                                 </buttonCell>
                             </button>
                             <button id="XBt-Da-scp">
@@ -36,7 +36,7 @@
                                 <autoresizingMask key="autoresizingMask"/>
                                 <buttonCell key="cell" type="check" title="Rich Text Format (RTF)" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="Es3-wp-v1x">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                    <font key="font" metaFont="titleBar" size="12"/>
+                                    <font key="font" size="13" name="HiraKakuProN-W3"/>
                                 </buttonCell>
                             </button>
                             <button id="X7t-yW-2Yo">
@@ -44,7 +44,7 @@
                                 <autoresizingMask key="autoresizingMask"/>
                                 <buttonCell key="cell" type="check" title="Rich Text Format Directory (RTFD)" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="WOl-Hm-iRt">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                    <font key="font" metaFont="titleBar" size="12"/>
+                                    <font key="font" size="13" name="HiraKakuProN-W3"/>
                                 </buttonCell>
                             </button>
                             <button id="P8J-dJ-xi5">
@@ -52,7 +52,7 @@
                                 <autoresizingMask key="autoresizingMask"/>
                                 <buttonCell key="cell" type="check" title="PDF" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="4sJ-6D-bQ7">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                    <font key="font" metaFont="titleBar" size="12"/>
+                                    <font key="font" size="13" name="HiraKakuProN-W3"/>
                                 </buttonCell>
                             </button>
                             <button id="qLL-Ab-1nf">
@@ -60,7 +60,7 @@
                                 <autoresizingMask key="autoresizingMask"/>
                                 <buttonCell key="cell" type="check" title="Filenames" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="7cx-2O-4ei">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                    <font key="font" metaFont="titleBar" size="12"/>
+                                    <font key="font" size="13" name="HiraKakuProN-W3"/>
                                 </buttonCell>
                             </button>
                             <button id="jJd-9z-5wx">
@@ -68,7 +68,7 @@
                                 <autoresizingMask key="autoresizingMask"/>
                                 <buttonCell key="cell" type="check" title="URL" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="k5g-M8-Fry">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                    <font key="font" metaFont="titleBar" size="12"/>
+                                    <font key="font" size="13" name="HiraKakuProN-W3"/>
                                 </buttonCell>
                             </button>
                             <button id="uzQ-Km-4h7">
@@ -76,13 +76,14 @@
                                 <autoresizingMask key="autoresizingMask"/>
                                 <buttonCell key="cell" type="check" title="TIFF Image" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="UIm-NV-R8L">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                    <font key="font" metaFont="titleBar" size="12"/>
+                                    <font key="font" size="13" name="HiraKakuProN-W3"/>
                                 </buttonCell>
                             </button>
                         </subviews>
                     </view>
                     <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
                     <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <font key="titleFont" size="12" name="HiraKakuProN-W3"/>
                 </box>
             </subviews>
         </customView>

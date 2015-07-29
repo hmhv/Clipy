@@ -20,7 +20,7 @@
                     <rect key="frame" x="382" y="68" width="39" height="14"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="chars" id="Xzd-Ac-Ubf">
-                        <font key="font" metaFont="smallSystem"/>
+                        <font key="font" size="11" name="HiraKakuProN-W3"/>
                         <color key="textColor" red="0.26666666666666666" green="0.26666666666666666" blue="0.26666666666666666" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
@@ -36,12 +36,16 @@
                         <color key="textColor" red="0.26666666666666666" green="0.26666666666666666" blue="0.26666666666666666" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
+                    <connections>
+                        <binding destination="GGb-3J-uc6" name="enabled" keyPath="values.showToolTipOnMenuItem" id="rOR-bx-hIY"/>
+                        <binding destination="GGb-3J-uc6" name="value" keyPath="values.maxLengthOfToolTipKey" id="nBa-kC-ELL"/>
+                    </connections>
                 </textField>
                 <textField verticalHuggingPriority="750" id="dZP-vf-PyE">
                     <rect key="frame" x="78" y="71" width="250" height="17"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Max length of tool tip string:" id="C8s-T0-tXY">
-                        <font key="font" metaFont="system"/>
+                        <font key="font" size="13" name="HiraKakuProN-W3"/>
                         <color key="textColor" red="0.26666666666666666" green="0.26666666666666666" blue="0.26666666666666666" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
@@ -50,7 +54,7 @@
                     <rect key="frame" x="382" y="249" width="39" height="14"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="items" id="S2S-lv-4hH">
-                        <font key="font" metaFont="smallSystem"/>
+                        <font key="font" size="11" name="HiraKakuProN-W3"/>
                         <color key="textColor" red="0.26666666666666666" green="0.26666666666666666" blue="0.26666666666666666" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
@@ -59,7 +63,7 @@
                     <rect key="frame" x="382" y="221" width="39" height="14"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="chars" id="EtR-DR-XDc">
-                        <font key="font" metaFont="smallSystem"/>
+                        <font key="font" size="11" name="HiraKakuProN-W3"/>
                         <color key="textColor" red="0.26666666666666666" green="0.26666666666666666" blue="0.26666666666666666" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
@@ -69,8 +73,11 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <buttonCell key="cell" type="check" title="Show tool tip on a menu item" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="UEz-cK-uor">
                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                        <font key="font" metaFont="system"/>
+                        <font key="font" size="13" name="HiraKakuProN-W3"/>
                     </buttonCell>
+                    <connections>
+                        <binding destination="GGb-3J-uc6" name="value" keyPath="values.showToolTipOnMenuItem" id="28P-ec-KbC"/>
+                    </connections>
                 </button>
                 <textField verticalHuggingPriority="750" id="YtL-kz-AFb">
                     <rect key="frame" x="333" y="249" width="44" height="22"/>
@@ -84,6 +91,7 @@
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                     <connections>
+                        <binding destination="GGb-3J-uc6" name="value" keyPath="values.kCPYPrefNumberOfItemsPlaceInsideFolderKey" id="I5E-xj-aZI"/>
                         <outlet property="nextKeyView" destination="Irf-jZ-iHe" id="zRa-AO-cdt"/>
                     </connections>
                 </textField>
@@ -91,7 +99,7 @@
                     <rect key="frame" x="60" y="251" width="268" height="17"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Number of items place inside a folder:" id="SgV-tf-Cbf">
-                        <font key="font" metaFont="system"/>
+                        <font key="font" size="13" name="HiraKakuProN-W3"/>
                         <color key="textColor" red="0.26666666666666666" green="0.26666666666666666" blue="0.26666666666666666" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
@@ -108,6 +116,7 @@
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                     <connections>
+                        <binding destination="GGb-3J-uc6" name="value" keyPath="values.kCPYPrefNumberOfItemsPlaceInlineKey" id="ccc-lS-zFY"/>
                         <outlet property="nextKeyView" destination="YtL-kz-AFb" id="Gcj-QJ-JAe"/>
                     </connections>
                 </textField>
@@ -115,7 +124,7 @@
                     <rect key="frame" x="60" y="278" width="268" height="17"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Number of items place inline:" id="rvx-AV-vpx">
-                        <font key="font" metaFont="system"/>
+                        <font key="font" size="13" name="HiraKakuProN-W3"/>
                         <color key="textColor" red="0.26666666666666666" green="0.26666666666666666" blue="0.26666666666666666" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
@@ -125,24 +134,34 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <buttonCell key="cell" type="check" title="Add key equivalents to numeric keys" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="S8K-uV-gvM">
                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                        <font key="font" metaFont="system"/>
+                        <font key="font" size="13" name="HiraKakuProN-W3"/>
                     </buttonCell>
+                    <connections>
+                        <binding destination="GGb-3J-uc6" name="value" keyPath="values.addNumericKeyEquivalents" id="QaB-gn-b93"/>
+                    </connections>
                 </button>
                 <button id="B8v-1G-KTG">
                     <rect key="frame" x="61" y="195" width="297" height="18"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <buttonCell key="cell" type="check" title="Mark menu items with numbers" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="XYg-qz-5no">
                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                        <font key="font" metaFont="system"/>
+                        <font key="font" size="13" name="HiraKakuProN-W3"/>
                     </buttonCell>
+                    <connections>
+                        <binding destination="GGb-3J-uc6" name="value" keyPath="values.menuItemsAreMarkedWithNumbers" id="unF-v5-q7n"/>
+                    </connections>
                 </button>
                 <button id="5Xf-PS-icd">
                     <rect key="frame" x="74" y="175" width="273" height="18"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <buttonCell key="cell" type="check" title="Menu items' title starts with 0" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="eBk-LH-RjJ">
                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                        <font key="font" metaFont="system"/>
+                        <font key="font" size="13" name="HiraKakuProN-W3"/>
                     </buttonCell>
+                    <connections>
+                        <binding destination="GGb-3J-uc6" name="enabled" keyPath="values.menuItemsAreMarkedWithNumbers" id="4ZG-fx-9EO"/>
+                        <binding destination="GGb-3J-uc6" name="value" keyPath="values.kCPYPrefMenuItemsTitleStartWithZeroKey" id="WeJ-uR-v2Z"/>
+                    </connections>
                 </button>
                 <textField verticalHuggingPriority="750" id="Irf-jZ-iHe">
                     <rect key="frame" x="333" y="221" width="44" height="22"/>
@@ -155,12 +174,15 @@
                         <color key="textColor" red="0.26666666666666666" green="0.26666666666666666" blue="0.26666666666666666" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
+                    <connections>
+                        <binding destination="GGb-3J-uc6" name="value" keyPath="values.kCPYPrefMaxMenuItemTitleLengthKey" id="Fmc-8D-xx0"/>
+                    </connections>
                 </textField>
                 <textField verticalHuggingPriority="750" id="Ase-Oa-CRD">
                     <rect key="frame" x="60" y="223" width="276" height="17"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="Number of characters in the menu:" id="k2d-mC-Nc0">
-                        <font key="font" metaFont="system"/>
+                        <font key="font" size="13" name="HiraKakuProN-W3"/>
                         <color key="textColor" red="0.26666666666666666" green="0.26666666666666666" blue="0.26666666666666666" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
@@ -170,22 +192,29 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <buttonCell key="cell" type="check" title="Show alert panel before clear history" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="1KF-6C-CTH">
                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                        <font key="font" metaFont="system"/>
+                        <font key="font" size="13" name="HiraKakuProN-W3"/>
                     </buttonCell>
+                    <connections>
+                        <binding destination="GGb-3J-uc6" name="enabled" keyPath="values.kCPYPrefAddClearHistoryMenuItemKey" id="zFV-Lc-VlC"/>
+                        <binding destination="GGb-3J-uc6" name="value" keyPath="values.kCPYPrefShowAlertBeforeClearHistoryKey" id="v36-7J-UNx"/>
+                    </connections>
                 </button>
                 <button id="Vyh-HX-jku">
                     <rect key="frame" x="61" y="133" width="359" height="18"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <buttonCell key="cell" type="check" title="Add a menu item to clear clipboard history" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="amL-cC-zz3">
                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                        <font key="font" metaFont="system"/>
+                        <font key="font" size="13" name="HiraKakuProN-W3"/>
                     </buttonCell>
+                    <connections>
+                        <binding destination="GGb-3J-uc6" name="value" keyPath="values.kCPYPrefAddClearHistoryMenuItemKey" id="CwF-bu-AVb"/>
+                    </connections>
                 </button>
                 <textField verticalHuggingPriority="750" id="teB-AS-0VV">
                     <rect key="frame" x="382" y="276" width="39" height="14"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="items" id="Z1O-c0-3Un">
-                        <font key="font" metaFont="smallSystem"/>
+                        <font key="font" size="11" name="HiraKakuProN-W3"/>
                         <color key="textColor" red="0.26666666666666666" green="0.26666666666666666" blue="0.26666666666666666" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
@@ -195,14 +224,17 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <buttonCell key="cell" type="check" title="Show Image" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="u0u-34-lcu">
                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                        <font key="font" metaFont="system"/>
+                        <font key="font" size="13" name="HiraKakuProN-W3"/>
                     </buttonCell>
+                    <connections>
+                        <binding destination="GGb-3J-uc6" name="value" keyPath="values.showImageInTheMenu" id="U3u-es-cyr"/>
+                    </connections>
                 </button>
                 <textField verticalHuggingPriority="750" id="4gX-34-MXV">
                     <rect key="frame" x="349" y="21" width="32" height="14"/>
                     <autoresizingMask key="autoresizingMask"/>
                     <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="pixel" id="VC9-m1-Uky">
-                        <font key="font" metaFont="smallSystem"/>
+                        <font key="font" size="11" name="HiraKakuProN-W3"/>
                         <color key="textColor" red="0.26666666666666666" green="0.26666666666666666" blue="0.26666666666666666" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
@@ -211,7 +243,7 @@
                     <rect key="frame" x="198" y="21" width="32" height="14"/>
                     <autoresizingMask key="autoresizingMask"/>
                     <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="pixel" id="uHr-Dw-Zem">
-                        <font key="font" metaFont="smallSystem"/>
+                        <font key="font" size="11" name="HiraKakuProN-W3"/>
                         <color key="textColor" red="0.26666666666666666" green="0.26666666666666666" blue="0.26666666666666666" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
@@ -228,6 +260,8 @@
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                     <connections>
+                        <binding destination="GGb-3J-uc6" name="enabled" keyPath="values.showImageInTheMenu" id="Z5W-cl-KXI"/>
+                        <binding destination="GGb-3J-uc6" name="value" keyPath="values.thumbnailWidth" id="W4P-Ya-3pd"/>
                         <outlet property="nextKeyView" destination="xxD-2Z-QUD" id="whh-kC-Zah"/>
                     </connections>
                 </textField>
@@ -243,6 +277,8 @@
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                     <connections>
+                        <binding destination="GGb-3J-uc6" name="enabled" keyPath="values.showImageInTheMenu" id="Xg2-8L-Rbd"/>
+                        <binding destination="GGb-3J-uc6" name="value" keyPath="values.thumbnailHeight" id="ZRg-X5-3C6"/>
                         <outlet property="nextKeyView" destination="yS4-pB-WUs" id="hsW-Rt-Na8"/>
                     </connections>
                 </textField>
@@ -250,7 +286,7 @@
                     <rect key="frame" x="245" y="21" width="51" height="17"/>
                     <autoresizingMask key="autoresizingMask"/>
                     <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="Height:" id="Fd1-kv-ouN">
-                        <font key="font" metaFont="system"/>
+                        <font key="font" size="13" name="HiraKakuProN-W3"/>
                         <color key="textColor" red="0.26666666666666666" green="0.26666666666666666" blue="0.26666666666666666" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
@@ -259,12 +295,13 @@
                     <rect key="frame" x="100" y="21" width="51" height="17"/>
                     <autoresizingMask key="autoresizingMask"/>
                     <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="Width:" id="p3V-Dt-w1h">
-                        <font key="font" metaFont="system"/>
+                        <font key="font" size="13" name="HiraKakuProN-W3"/>
                         <color key="textColor" red="0.26666666666666666" green="0.26666666666666666" blue="0.26666666666666666" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
             </subviews>
         </customView>
+        <userDefaultsController representsSharedInstance="YES" id="GGb-3J-uc6"/>
     </objects>
 </document>

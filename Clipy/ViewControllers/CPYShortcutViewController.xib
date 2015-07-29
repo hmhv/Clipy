@@ -20,52 +20,53 @@
                     <rect key="frame" x="60" y="19" width="361" height="120"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <view key="contentView">
-                        <rect key="frame" x="1" y="1" width="359" height="104"/>
+                        <rect key="frame" x="1" y="1" width="359" height="102"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField verticalHuggingPriority="750" id="dUA-wW-7Ms">
-                                <rect key="frame" x="15" y="45" width="152" height="17"/>
+                                <rect key="frame" x="15" y="43" width="152" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="History Menu:" id="bdo-8f-Lkv">
-                                    <font key="font" metaFont="system"/>
+                                    <font key="font" size="13" name="HiraKakuProN-W3"/>
                                     <color key="textColor" red="0.26666666666666666" green="0.26666666666666666" blue="0.26666666666666666" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
                             <customView id="xcK-hZ-0DH" customClass="SRRecorderControl">
-                                <rect key="frame" x="172" y="41" width="169" height="25"/>
+                                <rect key="frame" x="172" y="39" width="169" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </customView>
                             <textField verticalHuggingPriority="750" id="rrE-wD-Fbj">
-                                <rect key="frame" x="15" y="75" width="152" height="17"/>
+                                <rect key="frame" x="15" y="73" width="152" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Main Menu:" id="NoK-OS-pHt">
-                                    <font key="font" metaFont="system"/>
+                                    <font key="font" size="13" name="HiraKakuProN-W3"/>
                                     <color key="textColor" red="0.26666666666666666" green="0.26666666666666666" blue="0.26666666666666666" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
                             <customView id="brt-mt-hVN" customClass="SRRecorderControl">
-                                <rect key="frame" x="172" y="71" width="169" height="25"/>
+                                <rect key="frame" x="172" y="69" width="169" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </customView>
                             <textField verticalHuggingPriority="750" id="GHY-tF-2sI">
-                                <rect key="frame" x="15" y="17" width="152" height="17"/>
+                                <rect key="frame" x="15" y="15" width="152" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Snippets Menu:" id="rit-2s-lsQ">
-                                    <font key="font" metaFont="system"/>
+                                    <font key="font" size="13" name="HiraKakuProN-W3"/>
                                     <color key="textColor" red="0.26666666666666666" green="0.26666666666666666" blue="0.26666666666666666" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
                             <customView id="MIY-Hi-aZu" customClass="SRRecorderControl">
-                                <rect key="frame" x="172" y="13" width="169" height="25"/>
+                                <rect key="frame" x="172" y="11" width="169" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </customView>
                         </subviews>
                     </view>
                     <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
                     <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <font key="titleFont" size="12" name="HiraKakuProN-W3"/>
                 </box>
             </subviews>
         </customView>

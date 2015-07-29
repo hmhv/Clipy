@@ -44,7 +44,6 @@ class CPYMenuManager: NSObject {
         self.snippetIcon?.size = NSMakeSize(12, 13)
         
         self.createMenu()
-        self.createStatusItem()
         
         let defaults = NSUserDefaults.standardUserDefaults()
         defaults.addObserver(self, forKeyPath: kCPYPrefMenuIconSizeKey, options: .New, context: nil)

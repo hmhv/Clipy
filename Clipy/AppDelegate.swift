@@ -76,18 +76,12 @@ class AppDelegate: NSObject {
     // MARK: - Menu Actions
     internal func showPreferenceWindow() {
         NSApp.activateIgnoringOtherApps(true)
-        
-        let timer = NSTimer(timeInterval: NSTimeInterval(0.01), target: self, selector: "showPreference", userInfo: nil, repeats: false)
-        NSRunLoop.currentRunLoop().addTimer(timer, forMode: NSRunLoopCommonModes)
-    }
-    
-    internal func showPreference() {
         self.preferenceWindowController.showWindow(self)
     }
     
     internal func showSnippetEditorWindow() {
         NSApp.activateIgnoringOtherApps(true)
-        let timer = NSTimer(timeInterval: NSTimeInterval(0.01), target: self, selector: "showSnipperEditor", userInfo: nil, repeats: false)
+        let timer = NSTimer(timeInterval: NSTimeInterval(0.1), target: self, selector: "showSnipperEditor", userInfo: nil, repeats: false)
         NSRunLoop.currentRunLoop().addTimer(timer, forMode: NSRunLoopCommonModes)
     }
     
