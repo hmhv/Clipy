@@ -54,7 +54,7 @@
                             <button id="iq7-KI-vYc">
                                 <rect key="frame" x="9" y="24" width="36" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="pref_general" imagePosition="only" alignment="center" alternateImage="pref_general_on" imageScaling="proportionallyDown" inset="2" id="bQ3-8G-kQI">
+                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="pref_general" imagePosition="only" alignment="center" imageScaling="proportionallyDown" inset="2" id="bQ3-8G-kQI">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
@@ -65,7 +65,7 @@
                             <button tag="1" id="Vvg-gP-K4B">
                                 <rect key="frame" x="54" y="24" width="36" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="pref_menu" imagePosition="only" alignment="center" alternateImage="pref_menu_on" imageScaling="proportionallyDown" inset="2" id="aUT-UJ-uO0">
+                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="pref_menu" imagePosition="only" alignment="center" imageScaling="proportionallyDown" inset="2" id="aUT-UJ-uO0">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
@@ -76,7 +76,7 @@
                             <button tag="2" id="d0l-uZ-Vao">
                                 <rect key="frame" x="99" y="24" width="36" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="pref_type" imagePosition="only" alignment="center" alternateImage="pref_type_on" imageScaling="proportionallyDown" inset="2" id="0qy-WE-939">
+                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="pref_type" imagePosition="only" alignment="center" imageScaling="proportionallyDown" inset="2" id="0qy-WE-939">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
@@ -87,7 +87,7 @@
                             <button tag="3" id="rWb-EC-l8L">
                                 <rect key="frame" x="159" y="24" width="36" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="pref_shortcut" imagePosition="only" alignment="center" alternateImage="pref_shortcut_on" imageScaling="proportionallyDown" inset="2" id="kLL-bk-6Cw">
+                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="pref_shortcut" imagePosition="only" alignment="center" imageScaling="proportionallyDown" inset="2" id="kLL-bk-6Cw">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
@@ -98,7 +98,7 @@
                             <button tag="4" id="Tz5-gs-agL">
                                 <rect key="frame" x="229" y="24" width="36" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="pref_update" imagePosition="only" alignment="center" alternateImage="pref_update_on" imageScaling="proportionallyDown" inset="2" id="9Bf-u6-U7L">
+                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="pref_update" imagePosition="only" alignment="center" imageScaling="proportionallyDown" inset="2" id="9Bf-u6-U7L">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
@@ -217,14 +217,9 @@
     </objects>
     <resources>
         <image name="pref_general" width="36" height="24"/>
-        <image name="pref_general_on" width="35" height="23"/>
         <image name="pref_menu" width="36" height="24"/>
-        <image name="pref_menu_on" width="36" height="24"/>
         <image name="pref_shortcut" width="36" height="24"/>
-        <image name="pref_shortcut_on" width="35" height="23"/>
         <image name="pref_type" width="36" height="24"/>
-        <image name="pref_type_on" width="35" height="23"/>
         <image name="pref_update" width="36" height="24"/>
-        <image name="pref_update_on" width="35" height="23"/>
     </resources>
 </document>
