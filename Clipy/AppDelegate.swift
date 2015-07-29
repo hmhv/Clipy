@@ -15,7 +15,7 @@ class AppDelegate: NSObject {
     // MARK: - Properties
     private lazy var snippetEditorController = CPYSnippetEditorWindowController(windowNibName: "CPYSnippetEditorWindowController")
     
-    private lazy var preferenceWindowController = PreferenceWindowController(windowNibName: "PreferenceWindowController")
+    private lazy var preferenceWindowController = CPYPreferenceWindowController(windowNibName: "CPYPreferenceWindowController")
     
     
     // MARK: - Init
@@ -81,11 +81,6 @@ class AppDelegate: NSObject {
     
     internal func showSnippetEditorWindow() {
         NSApp.activateIgnoringOtherApps(true)
-        let timer = NSTimer(timeInterval: NSTimeInterval(0.1), target: self, selector: "showSnipperEditor", userInfo: nil, repeats: false)
-        NSRunLoop.currentRunLoop().addTimer(timer, forMode: NSRunLoopCommonModes)
-    }
-    
-    internal func showSnipperEditor() {
         self.snippetEditorController.showWindow(self)
     }
     

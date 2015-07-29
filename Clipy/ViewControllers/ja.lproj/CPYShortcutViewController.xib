@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="7706"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="CPYShortcutViewController" customModule="Clipy" customModuleProvider="target">
+            <connections>
+                <outlet property="historyShortcutRecorder" destination="xcK-hZ-0DH" id="6WP-yc-fYn"/>
+                <outlet property="mainShortcutRecorder" destination="brt-mt-hVN" id="UFF-ED-2Me"/>
+                <outlet property="snippetsShortcutRecorder" destination="MIY-Hi-aZu" id="t7r-TO-egb"/>
+                <outlet property="view" destination="c22-O7-iKe" id="JQm-xL-i13"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="c22-O7-iKe">
+            <rect key="frame" x="0.0" y="1" width="480" height="144"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <box autoresizesSubviews="NO" title="ショートカット" borderType="line" id="Mia-0f-RON">
+                    <rect key="frame" x="60" y="13" width="361" height="120"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <view key="contentView">
+                        <rect key="frame" x="1" y="1" width="359" height="102"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField verticalHuggingPriority="750" id="dUA-wW-7Ms">
+                                <rect key="frame" x="15" y="43" width="152" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="履歴メニュー:" id="bdo-8f-Lkv">
+                                    <font key="font" size="13" name="HiraKakuProN-W3"/>
+                                    <color key="textColor" red="0.26666666666666666" green="0.26666666666666666" blue="0.26666666666666666" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <customView id="xcK-hZ-0DH" customClass="SRRecorderControl">
+                                <rect key="frame" x="172" y="39" width="169" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="-2" id="9Wc-Hk-d2J"/>
+                                </connections>
+                            </customView>
+                            <textField verticalHuggingPriority="750" id="rrE-wD-Fbj">
+                                <rect key="frame" x="15" y="73" width="152" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="メインメニュー:" id="NoK-OS-pHt">
+                                    <font key="font" size="13" name="HiraKakuProN-W3"/>
+                                    <color key="textColor" red="0.26666666666666666" green="0.26666666666666666" blue="0.26666666666666666" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <customView id="brt-mt-hVN" customClass="SRRecorderControl">
+                                <rect key="frame" x="172" y="69" width="169" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="-2" id="Yea-gJ-IcT"/>
+                                </connections>
+                            </customView>
+                            <textField verticalHuggingPriority="750" id="GHY-tF-2sI">
+                                <rect key="frame" x="15" y="15" width="152" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="スニペットメニュー:" id="rit-2s-lsQ">
+                                    <font key="font" size="13" name="HiraKakuProN-W3"/>
+                                    <color key="textColor" red="0.26666666666666666" green="0.26666666666666666" blue="0.26666666666666666" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <customView id="MIY-Hi-aZu" customClass="SRRecorderControl">
+                                <rect key="frame" x="172" y="11" width="169" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="-2" id="99H-1P-FPB"/>
+                                </connections>
+                            </customView>
+                        </subviews>
+                    </view>
+                    <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                    <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <font key="titleFont" size="12" name="HiraKakuProN-W3"/>
+                </box>
+            </subviews>
+            <point key="canvasLocation" x="729" y="651"/>
+        </customView>
+    </objects>
+</document>

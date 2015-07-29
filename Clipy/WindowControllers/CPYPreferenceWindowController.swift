@@ -1,133 +1,130 @@
 //
-//  CPYPreferenceWindowController.swift
+//  PreferenceWindowController.swift
 //  Clipy
 //
-//  Created by 古林俊佑 on 2015/06/28.
+//  Created by 古林俊佑 on 2015/07/29.
 //  Copyright (c) 2015年 Shunsuke Furubayashi. All rights reserved.
 //
 
 import Cocoa
 
-class CPYPreferenceWindowController: DBPrefsWindowController, NSWindowDelegate {
+class CPYPreferenceWindowController: NSWindowController {
 
-    // MARK: - Propertis
-    // Views
-    @IBOutlet var generalPreferenceView: NSView!
-    @IBOutlet var menuPreferenceView: NSView!
-    @IBOutlet var typePreferenceView: NSView!
-    @IBOutlet var shortcutPreferenceView: NSView!
-    @IBOutlet var updatePreferenceView: NSView!
-    // Hot Keys
-    @IBOutlet weak var mainShortcutRecorder: SRRecorderControl!
-    @IBOutlet weak var historyShortcutRecorder: SRRecorderControl!
-    @IBOutlet weak var snippetsShortcutRecorder: SRRecorderControl!
-    private var shortcutRecorders = [SRRecorderControl]()
-    internal var storeTypes: NSMutableDictionary!
+    // MARK: - Properties
+    private lazy var viewControllers = [NSViewController(nibName: "CPYGeneralViewController", bundle: nil),
+                                        NSViewController(nibName: "CPYMenuViewController", bundle: nil),
+                                        CPYTypeViewController(nibName: "CPYTypeViewController", bundle: nil),
+                                        CPYShortcutViewController(nibName: "CPYShortcutViewController", bundle: nil),
+                                        NSViewController(nibName: "CPYUpdateViewController", bundle: nil)]
+    // toolbar
+    @IBOutlet weak var toolbarView: NSView!
+    // toolbar item
+    @IBOutlet weak var generalButton: NSButton!
+    @IBOutlet weak var menuButton: NSButton!
+    @IBOutlet weak var typeButton: NSButton!
+    @IBOutlet weak var shortcutButton: NSButton!
+    @IBOutlet weak var updateButton: NSButton!
+    // toolbar title
+    @IBOutlet weak var generalLabel: NSTextField!
+    @IBOutlet weak var menuLabel: NSTextField!
+    @IBOutlet weak var typeLabel: NSTextField!
+    @IBOutlet weak var shortcutLabel: NSTextField!
+    @IBOutlet weak var updateLabel: NSTextField!
     
-    // MARK: - Init
-    override init(window: NSWindow?) {
-        super.init(window: window)
-        let defaults = NSUserDefaults.standardUserDefaults()
-        self.storeTypes = (defaults.objectForKey(kCPYPrefStoreTypesKey) as! NSMutableDictionary).mutableCopy() as! NSMutableDictionary
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-
+    // MARK: - Window Life Cycle
     override func windowDidLoad() {
         super.windowDidLoad()
-        if let window = self.window {
-            window.delegate = self
-            window.center()
-            window.releasedWhenClosed = false
-        }
-        self.prepareHotKeys()
+        
+        self.window?.backgroundColor = NSColor(red: 0.99, green: 0.99, blue: 0.99, alpha: 1)
+        self.window?.titlebarAppearsTransparent = true
+        self.switchView(self.generalButton)
     }
     
-    // MARK: - Override Methods
-    override func showWindow(sender: AnyObject?) {
-        super.showWindow(sender)
-        self.window?.makeKeyAndOrderFront(self)
-    }
-
-    override func setupToolbar() {
-        if let image = NSImage(named: NSImageNamePreferencesGeneral) {
-            self.addView(self.generalPreferenceView, label: NSLocalizedString("General", comment: ""), image: image)
-        }
-        if let image = NSImage(named: "Menu") {
-            self.addView(self.menuPreferenceView, label: NSLocalizedString("Menu", comment: ""), image: image)
-        }
-        if let image = NSImage(named: "icon_application") {
-            self.addView(self.typePreferenceView, label: NSLocalizedString("Type", comment: ""), image: image)
-        }
-        if let image = NSImage(named: "PTKeyboardIcon") {
-            self.addView(self.shortcutPreferenceView, label: NSLocalizedString("Shortcuts", comment: ""), image: image)
-        }
-        if let image = NSImage(named: "SparkleIcon") {
-            self.addView(self.updatePreferenceView, label: NSLocalizedString("Updates", comment: ""), image: image)
-        }
-        
-        self.crossFade = true
-        self.shiftSlowsAnimation = false
-    }
-  
-    // MARK: - Private Methods
-    private func prepareHotKeys() {
-        self.shortcutRecorders = [self.mainShortcutRecorder, self.historyShortcutRecorder, self.snippetsShortcutRecorder]
-        
-        let hotKeyMap = CPYHotKeyManager.sharedManager.hotkeyMap
-        let hotKeyCombos = NSUserDefaults.standardUserDefaults().objectForKey(kCPYPrefHotKeysKey) as! [String: AnyObject]
-        for identifier in hotKeyCombos.keys {
-            
-            let keyComboPlist = hotKeyCombos[identifier] as! [String: AnyObject]
-            let keyCode = Int(keyComboPlist["keyCode"]! as! NSNumber)
-            let modifiers = UInt(keyComboPlist["modifiers"]! as! NSNumber)
-            
-            if let keys = hotKeyMap[identifier] as? [String: AnyObject] {
-                let index = keys[kIndex] as! Int
-                let recorder = self.shortcutRecorders[index]
-                let keyCombo = KeyCombo(flags: recorder.carbonToCocoaFlags(modifiers), code: keyCode)
-                recorder.keyCombo = keyCombo
-                recorder.animates = true
+    // MARK: - IBActions
+    @IBAction func switchView(sender: AnyObject) {
+        if let button = sender as? NSButton {
+            if let newView = self.viewControllers[button.tag]?.view {
+                
+                self.resetButtonImages()
+                self.selectButton(button.tag)
+                
+                
+                for view in self.window!.contentView.subviews {
+                    if let view = view as? NSView where view != self.toolbarView {
+                        view.removeFromSuperview()
+                    }
+                }
+                
+                let frame = self.window!.frame
+                var newFrame = self.window!.frameRectForContentRect(newView.frame)
+                newFrame.origin = frame.origin
+                newFrame.origin.y += NSHeight(frame) - NSHeight(newFrame) - NSHeight(self.toolbarView.frame)
+                newFrame.size.height += NSHeight(self.toolbarView.frame)
+                self.window!.setFrame(newFrame, display: true)
+                
+                self.window!.contentView.addSubview(newView)
             }
         }
     }
     
-    private func changeHotKeyByShortcutRecorder(aRecorder: SRRecorderControl!, keyCombo: KeyCombo) {
-        let newKeyCombo = PTKeyCombo(keyCode: keyCombo.code, modifiers: aRecorder.cocoaToCarbonFlags(keyCombo.flags))
+    // MARK: - Private Methods
+    private func resetButtonImages() {
+        self.generalButton.image    = NSImage(named: "pref_general")
+        self.menuButton.image       = NSImage(named: "pref_menu")
+        self.typeButton.image       = NSImage(named: "pref_type")
+        self.shortcutButton.image   = NSImage(named: "pref_shortcut")
+        self.updateButton.image     = NSImage(named: "pref_update")
         
-        var identifier = ""
-        if aRecorder == self.mainShortcutRecorder {
-            identifier = kClipMenuIdentifier
-        } else if aRecorder == self.historyShortcutRecorder {
-            identifier = kHistoryMenuIdentifier
-        } else if aRecorder == self.snippetsShortcutRecorder {
-            identifier = kSnippetsMenuIdentifier
-        }
-        
-        let hotKeyCenter = PTHotKeyCenter.sharedCenter()
-        let oldHotKey = hotKeyCenter.hotKeyWithIdentifier(identifier)
-        hotKeyCenter.unregisterHotKey(oldHotKey)
-        
-        let defaults = NSUserDefaults.standardUserDefaults()
-        var hotKeyPrefs = defaults.objectForKey(kCPYPrefHotKeysKey) as! [String: AnyObject]
-        hotKeyPrefs.updateValue(newKeyCombo.plistRepresentation(), forKey: identifier)
-        defaults.setObject(hotKeyPrefs, forKey: kCPYPrefHotKeysKey)
-        defaults.synchronize()
+        self.generalLabel.textColor     = NSColor(red: 0.2666, green: 0.2666, blue: 0.2666, alpha: 1)
+        self.menuLabel.textColor        = NSColor(red: 0.2666, green: 0.2666, blue: 0.2666, alpha: 1)
+        self.typeLabel.textColor        = NSColor(red: 0.2666, green: 0.2666, blue: 0.2666, alpha: 1)
+        self.shortcutLabel.textColor    = NSColor(red: 0.2666, green: 0.2666, blue: 0.2666, alpha: 1)
+        self.updateLabel.textColor      = NSColor(red: 0.2666, green: 0.2666, blue: 0.2666, alpha: 1)
     }
     
-    // MARK: - SRRecoederControl Delegate
-    func shortcutRecorder(aRecorder: SRRecorderControl!, keyComboDidChange newKeyCombo: KeyCombo) {
-        if contains(self.shortcutRecorders, aRecorder) {
-            self.changeHotKeyByShortcutRecorder(aRecorder, keyCombo: newKeyCombo)
+    private func selectButton(tag: Int) {
+        var selectButton: NSButton?
+        var selectLabel: NSTextField?
+        var selectImage: NSImage?
+        
+        switch tag{
+        case 0:
+            selectButton = self.generalButton
+            selectLabel  = self.generalLabel
+            selectImage  = NSImage(named: "pref_general_on")
+        case 1:
+            selectButton = self.menuButton
+            selectLabel  = self.menuLabel
+            selectImage  = NSImage(named: "pref_menu_on")
+        case 2:
+            selectButton = self.typeButton
+            selectLabel  = self.typeLabel
+            selectImage  = NSImage(named: "pref_type_on")
+        case 3:
+            selectButton = self.shortcutButton
+            selectLabel  = self.shortcutLabel
+            selectImage  = NSImage(named: "pref_shortcut_on")
+        case 4:
+            selectButton = self.updateButton
+            selectLabel  = self.updateLabel
+            selectImage  = NSImage(named: "pref_update_on")
+        default:
+            break
         }
+        
+        selectButton?.image = selectImage
+        selectLabel?.textColor = NSColor(red: 0.164, green: 0.517, blue: 0.823, alpha: 1)
     }
+    
+}
 
-    
+// MARK: - NSWindow Delegate
+extension CPYPreferenceWindowController: NSWindowDelegate {
     func windowWillClose(notification: NSNotification) {
-        let defaults = NSUserDefaults.standardUserDefaults()
-        defaults.setObject(self.storeTypes, forKey: kCPYPrefStoreTypesKey)
+        
+        if let typeViewController = self.viewControllers[2] as? CPYTypeViewController {
+            typeViewController.saveTypes()
+        }
         
         if let window = self.window {
             if !window.makeFirstResponder(window) {
@@ -136,5 +133,4 @@ class CPYPreferenceWindowController: DBPrefsWindowController, NSWindowDelegate {
         }
         NSApp.deactivate()
     }
-    
 }

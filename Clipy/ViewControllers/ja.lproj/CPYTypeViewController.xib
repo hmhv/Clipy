@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="7706"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="CPYTypeViewController" customModule="Clipy" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="c22-O7-iKe" id="cnO-NY-9Rc"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="c22-O7-iKe">
+            <rect key="frame" x="0.0" y="-5" width="480" height="201"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <box title="保存するクリップボードの種類を選択:" id="c3r-uv-Yuc">
+                    <rect key="frame" x="76" y="21" width="329" height="175"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <view key="contentView">
+                        <rect key="frame" x="2" y="2" width="325" height="156"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button id="oCD-zy-ZYU">
+                                <rect key="frame" x="14" y="132" width="238" height="18"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <buttonCell key="cell" type="check" title="プレーンテキスト" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="64l-4V-6d1">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" size="13" name="HiraKakuProN-W3"/>
+                                </buttonCell>
+                                <connections>
+                                    <binding destination="-2" name="value" keyPath="storeTypes.String" id="SJc-JH-TW9"/>
+                                </connections>
+                            </button>
+                            <button id="XBt-Da-scp">
+                                <rect key="frame" x="14" y="112" width="238" height="18"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <buttonCell key="cell" type="check" title="Rich Text Format (RTF)" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="Es3-wp-v1x">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" size="13" name="HiraKakuProN-W3"/>
+                                </buttonCell>
+                                <connections>
+                                    <binding destination="-2" name="value" keyPath="storeTypes.RTF" id="3Bz-Pi-ifG"/>
+                                </connections>
+                            </button>
+                            <button id="X7t-yW-2Yo">
+                                <rect key="frame" x="14" y="92" width="256" height="18"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <buttonCell key="cell" type="check" title="Rich Text Format Directory (RTFD)" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="WOl-Hm-iRt">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" size="13" name="HiraKakuProN-W3"/>
+                                </buttonCell>
+                                <connections>
+                                    <binding destination="-2" name="value" keyPath="storeTypes.RTFD" id="tfi-ch-vlo"/>
+                                </connections>
+                            </button>
+                            <button id="P8J-dJ-xi5">
+                                <rect key="frame" x="14" y="72" width="238" height="18"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <buttonCell key="cell" type="check" title="PDF" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="4sJ-6D-bQ7">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" size="13" name="HiraKakuProN-W3"/>
+                                </buttonCell>
+                                <connections>
+                                    <binding destination="-2" name="value" keyPath="storeTypes.PDF" id="x7h-gh-ZPS"/>
+                                </connections>
+                            </button>
+                            <button id="qLL-Ab-1nf">
+                                <rect key="frame" x="14" y="52" width="238" height="18"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <buttonCell key="cell" type="check" title="ファイル名" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="7cx-2O-4ei">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" size="13" name="HiraKakuProN-W3"/>
+                                </buttonCell>
+                                <connections>
+                                    <binding destination="-2" name="value" keyPath="storeTypes.Filenames" id="bLD-3c-nxo"/>
+                                </connections>
+                            </button>
+                            <button id="jJd-9z-5wx">
+                                <rect key="frame" x="14" y="32" width="238" height="18"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <buttonCell key="cell" type="check" title="URL" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="k5g-M8-Fry">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" size="13" name="HiraKakuProN-W3"/>
+                                </buttonCell>
+                                <connections>
+                                    <binding destination="-2" name="value" keyPath="storeTypes.URL" id="CPC-XM-sm8"/>
+                                </connections>
+                            </button>
+                            <button id="uzQ-Km-4h7">
+                                <rect key="frame" x="15" y="11" width="238" height="18"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <buttonCell key="cell" type="check" title="画像" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="UIm-NV-R8L">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" size="13" name="HiraKakuProN-W3"/>
+                                </buttonCell>
+                                <connections>
+                                    <binding destination="-2" name="value" keyPath="storeTypes.TIFF" id="Hb4-4Q-zJR"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                    </view>
+                    <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                    <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <font key="titleFont" size="12" name="HiraKakuProN-W3"/>
+                </box>
+            </subviews>
+            <point key="canvasLocation" x="729" y="651.5"/>
+        </customView>
+    </objects>
+</document>
