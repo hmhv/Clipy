@@ -116,3 +116,15 @@ class PreferenceWindowController: NSWindowController {
     }
     
 }
+
+// MARK: - NSWindow Delegate
+extension PreferenceWindowController: NSWindowDelegate {
+    func windowWillClose(notification: NSNotification) {
+        if let window = self.window {
+            if !window.makeFirstResponder(window) {
+                window.endEditingFor(nil)
+            }
+        }
+        NSApp.deactivate()
+    }
+}

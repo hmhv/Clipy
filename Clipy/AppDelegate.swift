@@ -75,18 +75,24 @@ class AppDelegate: NSObject {
     
     // MARK: - Menu Actions
     internal func showPreferenceWindow() {
-        dispatch_async(dispatch_get_main_queue(), { () -> Void in
-            NSApp.activateIgnoringOtherApps(true)
-            self.preferenceWindowController.showWindow(self)
-        })
-        //CPYPreferenceWindowController.sharedPrefsWindowController().showWindow(self)
+        NSApp.activateIgnoringOtherApps(true)
+        
+        let timer = NSTimer(timeInterval: NSTimeInterval(0.01), target: self, selector: "showPreference", userInfo: nil, repeats: false)
+        NSRunLoop.currentRunLoop().addTimer(timer, forMode: NSRunLoopCommonModes)
+    }
+    
+    internal func showPreference() {
+        self.preferenceWindowController.showWindow(self)
     }
     
     internal func showSnippetEditorWindow() {
-        dispatch_async(dispatch_get_main_queue(), { () -> Void in
-            NSApp.activateIgnoringOtherApps(true)
-            self.snippetEditorController.showWindow(self)
-        })
+        NSApp.activateIgnoringOtherApps(true)
+        let timer = NSTimer(timeInterval: NSTimeInterval(0.01), target: self, selector: "showSnipperEditor", userInfo: nil, repeats: false)
+        NSRunLoop.currentRunLoop().addTimer(timer, forMode: NSRunLoopCommonModes)
+    }
+    
+    internal func showSnipperEditor() {
+        self.snippetEditorController.showWindow(self)
     }
     
     internal func clearAllHistory() {
