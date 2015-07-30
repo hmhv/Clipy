@@ -15,9 +15,6 @@ class AppDelegate: NSObject {
     // MARK: - Properties
     private lazy var snippetEditorController = CPYSnippetEditorWindowController(windowNibName: "CPYSnippetEditorWindowController")
     
-    private lazy var preferenceWindowController = CPYPreferenceWindowController(windowNibName: "CPYPreferenceWindowController")
-    
-    
     // MARK: - Init
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -75,8 +72,7 @@ class AppDelegate: NSObject {
     
     // MARK: - Menu Actions
     internal func showPreferenceWindow() {
-        NSApp.activateIgnoringOtherApps(true)
-        self.preferenceWindowController.showWindow(self)
+        CPYPreferenceWindowController.sharedController.showWindow(nil)
     }
     
     internal func showSnippetEditorWindow() {

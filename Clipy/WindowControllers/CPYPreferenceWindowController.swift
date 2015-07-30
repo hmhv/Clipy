@@ -31,13 +31,24 @@ class CPYPreferenceWindowController: NSWindowController {
     @IBOutlet weak var shortcutLabel: NSTextField!
     @IBOutlet weak var updateLabel: NSTextField!
     
+    internal static let sharedController = CPYPreferenceWindowController(windowNibName: "CPYPreferenceWindowController")
+    
     // MARK: - Window Life Cycle
     override func windowDidLoad() {
         super.windowDidLoad()
         
+        self.window?.collectionBehavior = NSWindowCollectionBehavior.CanJoinAllSpaces
         self.window?.backgroundColor = NSColor(red: 0.99, green: 0.99, blue: 0.99, alpha: 1)
         self.window?.titlebarAppearsTransparent = true
         self.switchView(self.generalButton)
+    }
+    
+    // MARK: - IBActions
+    override func showWindow(sender: AnyObject?) {
+        super.showWindow(sender)
+        
+        NSApp.activateIgnoringOtherApps(true)
+        self.window?.makeKeyAndOrderFront(self)
     }
     
     // MARK: - IBActions
